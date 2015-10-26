@@ -1,6 +1,20 @@
-name: afelicioni/test3
+name: My App
+description: My amazing new app.
+url: 'https://example.org'
 author:
-  name: Alessio Felicioni
-  email: alessio.felicioni@gmail.com
-  url: null
-copyright: 2015 Alessio Felicioni
+  name: My Name
+  email: my.email@example.org
+  url: http//example.org/my-name
+  copyright: 2015 My Co.
+imports:
+  crystal/bower: ~0.4.1
+outputs:
+  - generator: bower.ConfigGenerator
+    spec:
+      directory: app/components/
+      analytics: false
+      timeout: 120000
+      registry:
+        search:
+          - 'http://localhost:8000'
+          - 'https://bower.herokuapp.com'
